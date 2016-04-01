@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/ng-cordova.min.js"></script>
+    
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="ExampleController">
+        <input class="input" ng-model="loginForm.first">First Name</input> <br></br>
+        <input class="input" ng-model="loginForm.last">Last Name</input> <br></br>
+        <img src="{{img}}" ng-model="loginForm.images" ng-change="choose()"></img>
+        <button class="button" ng-click="choose()">Choose Image</button> <br></br>
+        <button class="button" ng-click="insert(loginForm.first, loginForm.last)">Insert</button> <br></br>
+        <button class="button" ng-click="select(loginForm.last)">Select</button> <br></br>
+
+     <!--   Enter Mobile Number <input class="input" ng-model="countryCode" placeholder="Country Code"></input>
+       <input class="input" ng-model="mobileNumber" placeholder="Mobile Number"></input> -->
+       
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
