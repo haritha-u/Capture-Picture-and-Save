@@ -6,7 +6,7 @@ A basic login page where firstname, lastname and user image are stored in databa
 3. Inject ngCordova in app.js file<br/>
 4. Add camera and sqlite plugins by using below commands<br/>
 
-cordova plugin add cordova-plugin-camera
+cordova plugin add cordova-plugin-camera<br/>
 cordova plugin add cordova-sqlite-storage
 <br/>
 For controller code check app.js file<br/>
